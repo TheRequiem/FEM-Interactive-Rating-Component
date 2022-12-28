@@ -1,0 +1,217 @@
+/*  CSS Reset                  */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  html, body {margin: 0; height: 100%; overflow: auto}
+
+  @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+  /* Variables */
+
+:root {
+    --clr-orange: hsl(25, 97%, 53%);          /* Primary Colors */
+
+    --clr-light-gray: hsl(217, 12%, 63%);     /* Neutral Colors */
+    --clr-med-gray: hsl(216, 12%, 54%);
+    --clr-blue: hsl(213, 19%, 18%);
+    --clr-blue-a: hsla(213, 8%, 27%, 0.432);
+    --clr-dark-blue: hsl(216, 12%, 8%);
+    --clr-dark-blue-a: hsl(215, 27%, 12%);
+    
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    color: white;
+}
+
+body {
+    background-color: var(--clr-dark-blue);
+}
+
+#star {
+    width: 3rem;
+    border-radius: 100%;
+    background-color: var(--clr-blue-a);
+    padding: 0.8rem;
+}
+
+main {
+    background-image: linear-gradient(var(--clr-blue),var(--clr-dark-blue-a));
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    justify-content: center;
+    margin: 10rem auto;
+    padding: 1.5rem 1rem;
+    border-radius: 1.5rem;
+    position: relative;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  width: 23rem;
+  align-items: center;
+  margin: 10rem auto;
+  background-image: linear-gradient(var(--clr-blue),var(--clr-dark-blue-a));
+  padding: 2.5rem 1.5rem;
+  border-radius: 1.5rem;
+  position: absolute;
+}
+
+main #star,main h1,main p {
+  margin-left: 1.3rem;
+}
+
+h1 {
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: var(--clr-med-gray);
+    font-weight: 400;
+}
+
+
+input[type=radio] {
+opacity: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.rating_container {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.labels {
+  display: flex;
+  border-radius: 50%;
+  background-color: var(--clr-blue-a);
+  width: 3rem;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-med-gray);
+  cursor: pointer;
+}
+
+.labels:hover {
+  background-color: var(--clr-light-gray);
+  color: white;
+}
+
+input[type=radio]:checked + .labels {
+  color: white;
+  background-color: var(--clr-orange);
+}
+
+button {
+  width: 90%;
+  text-transform: uppercase;
+  border-radius: 2rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.5rem;
+  font-weight: 400;
+  background-color: var(--clr-orange);
+  border-width: 0;
+  color: white;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  color: var(--clr-orange);
+  background-color: white;
+}
+
+.button {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+#ty_img {
+  width: 40%;
+}
+
+h2 {
+  color: var(--clr-orange);
+  font-weight: 400;
+  font-size: 1rem;
+  border-radius: 1rem;
+  background-color: var(--clr-blue-a);
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  padding-top: 0.2rem;
+  margin-top: 1.5rem;
+}
+
+aside p {
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.attribution { font-size: 12px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
